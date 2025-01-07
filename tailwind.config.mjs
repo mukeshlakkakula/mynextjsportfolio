@@ -10,6 +10,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "black-800": "#1a1a1a",
+      },
+      fontFamily: {
+        inter: ["var(--font-inter)", "sans-serif"], // Add Inter font
+        roboto: ["var(--font-roboto)", "sans-serif"], // Add Roboto font
       },
     },
   },
