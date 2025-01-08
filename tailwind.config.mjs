@@ -7,6 +7,17 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+      shake: {
+        '0%, 100%': { transform: 'translateX(0)' },
+        '25%': { transform: 'translateX(-4px)' },
+        '50%': { transform: 'translateX(4px)' },
+        '75%': { transform: 'translateX(-2px)' },
+      },
+    },
+    animation: {
+      shake: 'shake 0.8s ease-in-out infinite',
+    },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

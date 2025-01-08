@@ -41,3 +41,8 @@ h3 {
 p {
   font-family: var(--font-inter), sans-serif; /* Inter for paragraphs */
 }
+
+.transition-all {
+  transition: all 0.5s ease-in-out;
+}
+
