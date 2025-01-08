@@ -12,7 +12,7 @@ const NavBar = (theme) => {
       <div className="bottom-nav-container">
         <div className="bottom-nav">
           <div className="bottom-nav-inner relative ">
-            <ul className="flex justify-between min-w-[350px] items-center bottom-4 fixed bg-gray-300 pl-4 pr-4 pb-2 pt-2 rounded-full left-1/2 transform -translate-x-1/2">
+            <ul className="flex justify-between min-w-[94%] text-white md:text-black md:min-w-[350px] items-center bottom-4 bg-gray-500 fixed md:bg-gray-300 pl-4 pr-4 pb-2 pt-2 rounded-full left-1/2 transform -translate-x-1/2">
               <li className="menu-item relative group">
                 <a href="#home" className="current">
                   {/* <!-- Icon --> */}

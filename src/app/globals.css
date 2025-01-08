@@ -29,7 +29,7 @@ body {
 }
 
 .text-red-h {
-  @apply text-rose-500 font-bold  font-inter;
+  @apply text-red-500 font-bold  font-inter;
 }
 /* You can override for specific elements */
 h1,
