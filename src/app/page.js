@@ -1,15 +1,34 @@
 "use client";
 import Image from "next/image";
-import Particle from "@/components/Particles";
+
 import HomeSection from "@/components/HomeSection";
 import AboutSection from "@/components/AboutSection";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoSunnyOutline } from "react-icons/io5";
 import { IoIosMoon } from "react-icons/io";
+import { motion } from "framer-motion";
+import ResumeSection from "@/components/ResumeSection";
 export default function Home() {
   const [theme, setTheme] = useState(false);
+
+  useEffect(() => {
+    // Initialize theme from localStorage
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme !== null) {
+      setTheme(savedTheme === "true"); // Convert string to boolean
+    } else {
+      localStorage.setItem("theme", false); // Default theme value
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = !theme;
+    setTheme(newTheme); // Toggle theme state
+    localStorage.setItem("theme", newTheme); // Persist new theme state
+  };
   return (
-    <div
+    <motion.div id="home"  animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}
       className={`${
         theme ? "darkTheme" : "lightTheme"
       } flex flex-col justify-center items-center p-[0.6rem] md:pl-[3rem] md:pr-[3rem] md:pt-[1rem] lg:pl-[4rem] lg:pr-[4rem] lg:pt-[1.3rem]`}
@@ -25,9 +44,7 @@ export default function Home() {
           </button>
           <button
             className="p-2"
-            onClick={() => {
-              setTheme(!theme);
-            }}
+            onClick={toggleTheme}
           >
             {theme ? (
               <p className="text-white text-2xl">
@@ -45,6 +62,7 @@ export default function Home() {
       <HomeSection theme={theme} />
 
       <AboutSection theme={theme} />
-    </div>
+      <ResumeSection theme={theme}/>
+    </motion.div>
   );
 }

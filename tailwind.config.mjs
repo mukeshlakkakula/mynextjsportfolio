@@ -16,7 +16,7 @@ export default {
       },
     },
     animation: {
-      shake: 'shake 0.8s ease-in-out infinite',
+      shake: 'shake 1s ease-in-out infinite ',
     },
       colors: {
         background: "var(--background)",
