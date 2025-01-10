@@ -37,7 +37,9 @@ h2,
 h3 {
   font-family: var(--font-roboto), sans-serif; /* Apply Roboto for headings */
 }
-
+p{
+  font-family: var(--font-roboto), sans-serif;
+}
 .transition-all {
   transition: all 0.5s ease-in-out;
 }
