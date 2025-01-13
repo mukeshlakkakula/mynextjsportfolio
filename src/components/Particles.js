@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 
 import { loadFull } from "tsparticles";
@@ -15,7 +15,7 @@ export default function Particle() {
     });
   }, []);
 
-  const particlesLoaded = (container) => {};
+  const particlesLoaded = () => {};
 
   return (
     <>

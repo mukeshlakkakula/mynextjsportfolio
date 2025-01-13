@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 
 import HomeSection from "@/components/HomeSection";
 import AboutSection from "@/components/AboutSection";
@@ -27,8 +26,10 @@ export default function Home() {
     localStorage.setItem("theme", newTheme); // Persist new theme state
   };
   return (
-    <motion.div id="home"  animate={{ opacity: 1 }}
-    transition={{ duration: 0.5 }}
+    <motion.div
+      id="home"
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
       className={`${
         theme ? "darkTheme" : "lightTheme"
       } flex flex-col justify-center items-center p-[0.6rem] md:pl-[3rem] md:pr-[3rem] md:pt-[1rem] lg:pl-[4rem] lg:pr-[4rem] lg:pt-[1.3rem]`}
@@ -40,12 +41,9 @@ export default function Home() {
         </h1>
         <div className="flex items-center gap-2">
           <button className="pl-4 pr-4 pt-2 pb-2 text-red-h text-sm lg:text-md font-normal border-[2px] rounded-full">
-            Let's talk
+            Let&#39;s talk
           </button>
-          <button
-            className="p-2"
-            onClick={toggleTheme}
-          >
+          <button className="p-2" onClick={toggleTheme}>
             {theme ? (
               <p className="text-white text-2xl">
                 <IoSunnyOutline />{" "}
@@ -62,7 +60,7 @@ export default function Home() {
       <HomeSection theme={theme} />
 
       <AboutSection theme={theme} />
-      <ResumeSection theme={theme}/>
+      <ResumeSection theme={theme} />
     </motion.div>
   );
 }
