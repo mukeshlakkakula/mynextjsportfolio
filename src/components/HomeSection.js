@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import NavBar from "./NavBar";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import centerimage from "../../public/Images/centerimage.jpeg";
+import centerimage from "@/Images/centerimage.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
@@ -35,22 +35,26 @@ const HomeSection = (theme) => {
             follow on
           </p>
           <hr
-  className={`${
-    !theme.theme ? "border-black" : "border-white"
-  } w-[100px] lg:rotate-90 block border-t-2`}
-/>
+            className={`${
+              !theme.theme ? "border-black" : "border-white"
+            } w-[100px] lg:rotate-90 block border-t-2`}
+          />
           <div className="flex gap-2 lg:flex-col justify-between ">
-            <FaLinkedin className={`${
-              !theme.theme ? "text-black" : "text-white"
-            } text-[28px] hover:text-blue-600 hover:bg-white rounded `}/>
-            <FaSquareXTwitter  className={`${
-              !theme.theme ? "text-black" : "text-white"
-            } text-[28px] hover:text-white hover:bg-black hover:rotate-12 rounded`}/>
+            <FaLinkedin
+              className={`${
+                !theme.theme ? "text-black" : "text-white"
+              } text-[28px] hover:text-blue-600 hover:bg-white rounded `}
+            />
+            <FaSquareXTwitter
+              className={`${
+                !theme.theme ? "text-black" : "text-white"
+              } text-[28px] hover:text-white hover:bg-black hover:rotate-12 rounded`}
+            />
             <FaInstagram
-  className={`${
-    !theme.theme ? "text-black" : "text-white"
-  } text-[28px] hover:text-white hover:bg-pink-500 rounded transition-colors duration-300`}
-/>
+              className={`${
+                !theme.theme ? "text-black" : "text-white"
+              } text-[28px] hover:text-white hover:bg-pink-500 rounded transition-colors duration-300`}
+            />
           </div>
         </div>
 
@@ -59,7 +63,12 @@ const HomeSection = (theme) => {
           alt="centerImage"
           className="rounded-full w-[70%] lg:w-[30%] m-auto"
         />
-        <div onClick={() => scrollToSection("about")} className="cursor-pointer">scroll to down</div>
+        <div
+          onClick={() => scrollToSection("about")}
+          className="cursor-pointer"
+        >
+          scroll to down
+        </div>
       </div>
     </motion.div>
   );
