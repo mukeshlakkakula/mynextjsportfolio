@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import NavBar from "./NavBar";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import centerimage from "@/Images/centerimage.png";
+import centerimage from "@/Images/centerImage.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
