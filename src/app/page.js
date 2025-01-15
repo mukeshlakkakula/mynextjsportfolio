@@ -7,6 +7,7 @@ import { IoSunnyOutline } from "react-icons/io5";
 import { IoIosMoon } from "react-icons/io";
 import { motion } from "framer-motion";
 import ResumeSection from "@/components/ResumeSection";
+import ContactSection from "@/components/ContactSection";
 export default function Home() {
   const [theme, setTheme] = useState(false);
 
@@ -61,6 +62,7 @@ export default function Home() {
 
       <AboutSection theme={theme} />
       <ResumeSection theme={theme} />
+      <ContactSection/>
     </motion.div>
   );
 }
