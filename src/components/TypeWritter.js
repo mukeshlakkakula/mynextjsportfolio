@@ -64,7 +64,7 @@ const ProfileTypewriter = (theme) => {
             </h2>
             <p
                 className={`${!newTheme ? "text-black" : "text-white"
-                    } font-medium  opacity-85 text-sm`}
+                    } font-medium   text-sm`}
             >
                 I am  skilled  with a proven track record of delivering high-quality web applications tailored to client needs.
                 I specialize in building scalable and user-centric solutions.
