@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import ResumeSection from "@/components/ResumeSection";
 import ContactSection from "@/components/ContactSection";
 export default function Home() {
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(true);
 
   useEffect(() => {
     // Initialize theme from localStorage
@@ -17,7 +17,7 @@ export default function Home() {
     if (savedTheme !== null) {
       setTheme(savedTheme === "true"); // Convert string to boolean
     } else {
-      localStorage.setItem("theme", false); // Default theme value
+      localStorage.setItem("theme", true); // Default theme value
     }
   }, []);
 
@@ -25,6 +25,9 @@ export default function Home() {
     const newTheme = !theme;
     setTheme(newTheme); // Toggle theme state
     localStorage.setItem("theme", newTheme); // Persist new theme state
+  };
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <motion.div
@@ -41,7 +44,12 @@ export default function Home() {
           <span className={`${theme ? "text-white" : "text-black"}`}>Code</span>
         </h1>
         <div className="flex items-center gap-2">
-          <button className="pl-4 pr-4 pt-2 pb-2 text-red-h text-sm lg:text-md font-normal border-[2px] rounded-full">
+          <button
+            onClick={() => {
+              scrollToSection("contact");
+            }}
+            className="pl-4 pr-4 pt-2 pb-2 text-red-h text-sm lg:text-md font-normal border-[2px] rounded-full"
+          >
             Let&#39;s talk
           </button>
           <button className="p-2" onClick={toggleTheme}>
@@ -62,7 +70,7 @@ export default function Home() {
 
       <AboutSection theme={theme} />
       <ResumeSection theme={theme} />
-      <ContactSection/>
+      <ContactSection theme={theme} />
     </motion.div>
   );
 }

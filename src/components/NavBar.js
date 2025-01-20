@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { FaHome } from "react-icons/fa";
 import { BiSolidUser } from "react-icons/bi";
-import { GrCertificate } from "react-icons/gr";
 
 import { LuHeartHandshake, LuMessageCircleMore } from "react-icons/lu";
 import { MdHomeRepairService } from "react-icons/md";
@@ -16,7 +15,7 @@ const NavBar = (theme) => {
   const navItems = [
     { id: "home", label: "Home", icon: <FaHome /> },
     { id: "about", label: "About", icon: <BiSolidUser /> },
-    { id: "resume", label: "Resume", icon: <GrCertificate /> },
+
     { id: "services", label: "Service", icon: <LuHeartHandshake /> },
     { id: "portfolio", label: "Portfolio", icon: <MdHomeRepairService /> },
     { id: "contact", label: "Contact", icon: <LuMessageCircleMore /> },
@@ -24,12 +23,13 @@ const NavBar = (theme) => {
   return (
     <div>
       {/* <!-- Bottom Navigation Menu --> */}
-      <div className="bottom-nav-container">
+      <div className="bottom-nav-container" style={{ zIndex: 1000 }}>
         <div className="bottom-nav">
           <div className="bottom-nav-inner relative ">
             {navBarActive ? (
               <ul
-                className={`flex justify-between min-w-[94%] text-white md:text-black md:min-w-[350px] items-center bottom-4 bg-gray-500 fixed md:bg-gray-300 pl-4 pr-4 pb-2 pt-2 rounded-full left-1/2 transform -translate-x-1/2 transition duration-150  ease-in-out   ${
+                style={{ zIndex: 10 }}
+                className={`flex justify-around min-w-[94%] text-white md:text-black md:min-w-[350px] items-center bottom-4 bg-gray-500 fixed md:bg-gray-300 pl-4 pr-4 pb-2 pt-2 rounded-full left-1/2 transform -translate-x-1/2 transition duration-150  ease-in-out   ${
                   navBarActive ? "opacity-100 scale-100" : "opacity-0 scale-90"
                 }`}
               >

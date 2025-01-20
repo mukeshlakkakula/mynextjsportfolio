@@ -37,9 +37,46 @@ h2,
 h3 {
   font-family: var(--font-roboto), sans-serif; /* Apply Roboto for headings */
 }
-p{
+p {
   font-family: var(--font-roboto), sans-serif;
 }
 .transition-all {
   transition: all 0.5s ease-in-out;
+}
+
+.timeline {
+  position: relative;
+  margin: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.timeline-date {
+  flex-shrink: 0;
+  width: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.timeline-content {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.timeline-content p {
+  margin: 5px 0 0;
 }

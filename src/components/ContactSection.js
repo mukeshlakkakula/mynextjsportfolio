@@ -1,6 +1,7 @@
 import React from "react";
 
-const ContactSection = () => {
+const ContactSection = (theme) => {
+  console.log("thtt", theme);
   return <div id="contact">ContactSection</div>;
 };
 
