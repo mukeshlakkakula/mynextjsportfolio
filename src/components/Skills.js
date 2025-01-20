@@ -18,37 +18,37 @@ const Skills = () => {
           Frontend Skills
         </h2>
         <div className="flex flex-wrap justify-start">
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <FaHtml5 />
             </span>
             HTML
           </p>
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <FaCss3Alt />
             </span>
             CSS
           </p>
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <IoLogoJavascript />
             </span>
             JavaScript
           </p>
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <RiTailwindCssFill />
             </span>
             Tailwind CSS
           </p>{" "}
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <FaReact />
             </span>
             ReactJS
           </p>{" "}
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <RiNextjsFill />
             </span>
@@ -66,19 +66,19 @@ const Skills = () => {
           Backend Skills
         </h2>
         <div className="flex flex-wrap justify-start  ">
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <RiNodejsLine />
             </span>
             Node.js
           </p>
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <SiExpress />
             </span>
             Express.js
           </p>
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <SiPython />
             </span>
@@ -96,25 +96,25 @@ const Skills = () => {
           DataBase Skills
         </h2>
         <div className="flex flex-wrap justify-start">
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <SiSqlite />
             </span>
             SQLite
           </p>
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <SiMongodb />
             </span>
             MongoDB
           </p>
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <SiAppwrite />
             </span>
             Appwrite
           </p>
-          <p className="flex gap-2 items-center text-base font-medium min-w-[50%] justify-start p-2">
+          <p className="flex gap-2 items-center text-base text-black font-medium min-w-[50%] justify-start p-2">
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white">
               <IoLogoFirebase />
             </span>
