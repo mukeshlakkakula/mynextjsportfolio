@@ -23,9 +23,7 @@ export default function Particle() {
         <Particles
           id="tsparticles"
           particlesLoaded={particlesLoaded}
-          style={{
-            zIndex: 1,
-          }}
+          className="absolute top-0 left-0 w-full h-full -z-0"
           options={{
             fpsLimit: 120,
             interactivity: {

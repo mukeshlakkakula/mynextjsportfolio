@@ -6,9 +6,10 @@ import { useEffect, useState } from "react";
 import { IoSunnyOutline } from "react-icons/io5";
 import { IoIosMoon } from "react-icons/io";
 import { motion } from "framer-motion";
-import ResumeSection from "@/components/ResumeSection";
+// import ResumeSection from "@/components/Testimonials";
 import ContactSection from "@/components/ContactSection";
 import ServicesSection from "@/components/ServicesSection";
+import PorfolioSection from "@/components/PorfolioSection";
 export default function Home() {
   const [theme, setTheme] = useState(true);
 
@@ -49,11 +50,11 @@ export default function Home() {
             onClick={() => {
               scrollToSection("contact");
             }}
-            className="pl-4 pr-4 pt-2 pb-2 text-red-h text-sm lg:text-md font-normal border-[2px] rounded-full"
+            className="pl-4 relative z-10 pr-4 pt-2 pb-2 text-red-h text-sm lg:text-md font-normal border-[2px] rounded-full"
           >
             Let&#39;s talk
           </button>
-          <button className="p-2" onClick={toggleTheme}>
+          <button className="p-2 relative z-10" onClick={toggleTheme}>
             {theme ? (
               <p className="text-white text-2xl">
                 <IoSunnyOutline />{" "}
@@ -71,7 +72,8 @@ export default function Home() {
 
       <AboutSection theme={theme} />
       <ServicesSection theme={theme} />
-      <ResumeSection theme={theme} />
+
+      <PorfolioSection theme={theme} />
       <ContactSection theme={theme} />
     </motion.div>
   );

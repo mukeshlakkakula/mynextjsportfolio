@@ -125,14 +125,14 @@ const ServicesSection = (theme) => {
       gsap.fromTo(
         modalRef.current,
         { opacity: 0, scale: 0.8 },
-        { opacity: 1, scale: 1, duration: 0.3 }
+        { opacity: 1, scale: 1, duration: 0.5 }
       );
     }
   }, [activeService]);
 
   const serviceCards = serviceData.map((each) => (
     <div
-      className="max-w-sm mx-auto lg:min-w-[288px] min-w-[80%] lg:max-w-[289px] p-4"
+      className="max-w-sm mx-auto lg:min-w-[288px] min-w-[80%] lg:max-w-[289px] p-4 relative z-10"
       key={each.id}
     >
       <div className="bg-white shadow-md  rounded-lg text-center p-[0.6rem] lg:p-2 border-b-4 border-red-500">
@@ -142,7 +142,7 @@ const ServicesSection = (theme) => {
             alt={`img${each.id}`}
             className="w-full rounded lg:max-h-[180px]"
           />
-          <h2 className="text-lg md:text-lg font-semibold text-gray-800 mb-2">
+          <h2 className="text-lg md:text-lg font-semibold text-gray-800 ">
             {each.ServiceName}
           </h2>
           <button
@@ -162,7 +162,7 @@ const ServicesSection = (theme) => {
   return (
     <motion.div
       id="services"
-      className="min-h-screen w-full flex flex-col  items-center lg:gap-7 "
+      className="min-h-screen w-full flex flex-col  items-center lg:gap-7  "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -176,12 +176,13 @@ const ServicesSection = (theme) => {
         </div>
       </div>
       <hr />
+      {/* Modal */}
       {activeService && (
-        <div
-          ref={modalRef}
-          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-        >
-          <div className="bg-white rounded-lg w-11/12 lg:w-1/2 h-auto max-h-[90vh] overflow-auto p-4 lg:p-6 relative shadow-lg">
+        <div className="fixed z-50 inset-0 bg-black bg-opacity-100 flex justify-center items-center ">
+          <div
+            ref={modalRef}
+            className="bg-white rounded-xl w-11/12 lg:w-1/2 h-auto max-h-[90vh] overflow-auto p-4 lg:p-6 relative shadow-lg"
+          >
             {/* Close Button */}
             <button
               onClick={handleCloseModal}
@@ -205,7 +206,7 @@ const ServicesSection = (theme) => {
               <div className=" flex flex-col gap-3">
                 {activeServiceData.Description.map((skill, idx) => (
                   <p
-                    className="flex  gap-2 items-center   text-base text-black font-medium min-w-[50%] justify-start "
+                    className="flex  gap-2 items-center  text-sm  md:text-base text-black font-medium min-w-[50%] justify-start "
                     key={idx}
                   >
                     {" "}
@@ -220,7 +221,7 @@ const ServicesSection = (theme) => {
                 Technologies:
                 <br />
                 <span className="text-gray-800 font-normal text-sm">
-                  **As per project Requirment
+                  **As per the project requirements
                 </span>
               </h3>
 
@@ -256,7 +257,8 @@ const ServicesSection = (theme) => {
             }
             div::-webkit-scrollbar-track {
               background-color: #f3f4f6; /* Tailwind gray-100 */
-              padding-right: 3px;
+              margin: 10px; /* Moves the track inward */
+              border-radius: 6px;
             }
           `}</style>
         </div>

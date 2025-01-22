@@ -23,13 +23,12 @@ const NavBar = (theme) => {
   return (
     <div>
       {/* <!-- Bottom Navigation Menu --> */}
-      <div className="bottom-nav-container" style={{ zIndex: 1000 }}>
+      <div className="bottom-nav-container">
         <div className="bottom-nav">
-          <div className="bottom-nav-inner relative ">
+          <div className="bottom-nav-inner ">
             {navBarActive ? (
               <ul
-                style={{ zIndex: 10 }}
-                className={`flex justify-around min-w-[94%] text-white md:text-black md:min-w-[350px] items-center bottom-4 bg-gray-500 fixed md:bg-gray-300 pl-4 pr-4 pb-2 pt-2 rounded-full left-1/2 transform -translate-x-1/2 transition duration-150  ease-in-out   ${
+                className={`flex justify-around min-w-[94%] text-white md:text-black md:min-w-[350px] items-center bottom-4 bg-gray-500 fixed z-20 md:bg-gray-300 pl-4 pr-4 pb-2 pt-2 rounded-full left-1/2 transform -translate-x-1/2 transition duration-150  ease-in-out   ${
                   navBarActive ? "opacity-100 scale-100" : "opacity-0 scale-90"
                 }`}
               >
@@ -72,7 +71,7 @@ const NavBar = (theme) => {
                 </li>
               </ul>
             ) : (
-              <div className="fixed bottom-4 left-0 right-0 flex justify-center">
+              <div className="fixed bottom-4 left-0 right-0 flex justify-center z-20">
                 <button
                   onClick={() => {
                     setNavbarActive(!navBarActive);

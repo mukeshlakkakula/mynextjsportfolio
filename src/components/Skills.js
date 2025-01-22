@@ -12,7 +12,7 @@ import {
 } from "react-icons/si";
 const Skills = () => {
   const frontendTechnologies = (
-    <div className="max-w-sm mx-auto ">
+    <div className="max-w-sm mx-auto relative z-10 ">
       <div className="bg-white shadow-md rounded-lg text-center p-[0.6rem] lg:p-4 border-b-4 border-red-500">
         <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
           Frontend Skills
@@ -60,7 +60,7 @@ const Skills = () => {
   );
 
   const BackendTechnologies = (
-    <div className="max-w-sm mx-auto ">
+    <div className="max-w-sm mx-auto relative z-10 ">
       <div className="bg-white shadow-md lg:min-h-[222px] rounded-lg text-center p-[0.6rem] lg:p-4 border-b-4 border-red-500">
         <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
           Backend Skills
@@ -90,7 +90,7 @@ const Skills = () => {
   );
 
   const DataBaseSkills = (
-    <div className="max-w-sm mx-auto ">
+    <div className="max-w-sm mx-auto relative z-10 ">
       <div className="bg-white shadow-md rounded-lg text-center p-[0.6rem] lg:p-4 border-b-4 border-red-500">
         <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
           DataBase Skills

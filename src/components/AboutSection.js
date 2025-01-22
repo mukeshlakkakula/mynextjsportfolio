@@ -19,7 +19,7 @@ const AboutSection = (theme) => {
   return (
     <motion.div
       id="about"
-      className="min-h-screen w-full flex flex-col justify-center items-center lg:gap-7 "
+      className="min-h-screen w-full flex flex-col justify-center items-center lg:gap-7  "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -32,7 +32,7 @@ const AboutSection = (theme) => {
           <Image
             src={myProfile}
             alt="myprofile"
-            className="border min-w-[200px] max-w-[220px] lg:min-w-[250px] lg:max-w-[260px] rounded-2xl w-full "
+            className="border min-w-[200px] max-w-[220px] lg:min-w-[250px]  lg:max-w-[260px] rounded-2xl w-full relative z-10 "
           />
 
           <div className="w-full h-full p-4 lg:p-5">
@@ -58,7 +58,7 @@ const AboutSection = (theme) => {
             className={`${
               activeTab === "Skills"
                 ? "bg-red-500"
-                : "border-2 border-red-500 hover:bg-red-500"
+                : "border-2 border-red-500 lg:hover:bg-red-500"
             } ${
               themeAct ? "text-white" : "text-black"
             } font-bold text-xl rounded-[25px] pl-4 pr-4 pb-2 pt-2`}
@@ -72,7 +72,7 @@ const AboutSection = (theme) => {
             className={`${
               activeTab === "Experience"
                 ? "bg-red-500"
-                : "border-2 border-red-500 hover:bg-red-500"
+                : "border-2 border-red-500 lg:hover:bg-red-500"
             } ${
               themeAct ? "text-white" : "text-black"
             } font-bold text-xl rounded-[25px] pl-4 pr-4 pb-2 pt-2`}

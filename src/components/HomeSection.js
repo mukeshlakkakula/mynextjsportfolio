@@ -32,7 +32,7 @@ const HomeSection = (theme) => {
   return (
     <motion.div
       id="home"
-      className="min-h-screen w-full flex justify-center items-center "
+      className="min-h-screen w-full flex justify-center items-center   "
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
@@ -41,7 +41,7 @@ const HomeSection = (theme) => {
         <div
           className={`${
             !theme.theme ? "text-black" : "text-white"
-          }text-red-500 lg:order-1 order-3 flex lg:flex-col flex-row justify-between items-center gap-2 lg:gap-7`}
+          }text-red-500 relative z-10 lg:order-1 order-3 flex lg:flex-col flex-row justify-between items-center gap-2 lg:gap-7`}
         >
           <p
             className={`${
@@ -86,12 +86,12 @@ const HomeSection = (theme) => {
           <Image
             src={centerimage}
             alt="centerImage"
-            className="rounded-full w-[70%] lg:w-[40%] m-auto"
+            className="rounded-full w-[70%] lg:w-[40%] m-auto relative z-10 "
           />
         </div>
         <div
           onClick={() => scrollToSection("about")}
-          className="cursor-pointer lg:order-3 order-1 hidden lg:block"
+          className="cursor-pointer lg:order-3 order-1 hidden lg:block relative z-10"
         >
           <p
             ref={scroll}
