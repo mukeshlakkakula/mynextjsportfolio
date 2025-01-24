@@ -35,7 +35,7 @@ const AboutSection = (theme) => {
             className="border min-w-[200px] max-w-[220px] lg:min-w-[250px]  lg:max-w-[260px] rounded-2xl w-full relative z-10 "
           />
 
-          <div className="w-full h-full p-4 lg:p-5">
+          <div className="w-full h-full p-4 lg:p-5 relative z-10">
             <ProfileTypingEffect theme={theme} />
           </div>
         </div>

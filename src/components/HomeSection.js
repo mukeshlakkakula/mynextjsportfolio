@@ -91,13 +91,13 @@ const HomeSection = (theme) => {
         </div>
         <div
           onClick={() => scrollToSection("about")}
-          className="cursor-pointer lg:order-3 order-1 hidden lg:block relative z-10"
+          className="cursor-pointer lg:order-3 order-1 hidden lg:block "
         >
           <p
             ref={scroll}
             className={`${
               !theme.theme ? "text-black" : "text-white bg-transparent"
-            } text-[28px] hover:text-red-500 hover:bg-transparent rounded min-w-[60px]`}
+            } text-[28px] hover:text-red-500 hover:bg-transparent rounded min-w-[60px] relative z-10`}
           >
             <RiScrollToBottomFill />
           </p>

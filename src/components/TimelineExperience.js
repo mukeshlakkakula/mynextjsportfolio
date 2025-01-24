@@ -22,7 +22,7 @@ const TimelineExperience = () => {
   }, []);
   const experience = (name, description, comapny = "") => {
     return (
-      <div className="max-w-sm mx-auto ">
+      <div className="max-w-sm mx-auto relative z-10">
         <div className="bg-white shadow-md rounded-lg text-center p-[0.6rem] lg:p-4 border-b-4 border-red-500">
           <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
             {name}
@@ -57,7 +57,7 @@ const TimelineExperience = () => {
     <Timeline
       mode={timelineMode}
       items={timelineItems}
-      className="w-full m-auto"
+      className="w-full m-auto "
     />
   );
 };

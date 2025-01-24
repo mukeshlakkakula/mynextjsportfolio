@@ -1,16 +1,24 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import adminpanelimg from "@/Images/Services/adminpanelImg.jpg";
-import fullStackImg from "@/Images/Services/backendImg01.jpg";
 
-import DmcProImg from "@/Images/ProjectImages/dmcpro.png";
-
-import FlixgoImg from "@/Images/ProjectImages/flixgoImg.png";
+import { IoMdOpen, IoMdClose } from "react-icons/io";
 import { HiOutlineCheck } from "react-icons/hi";
 import gsap from "gsap";
 import Image from "next/image";
+import DmcProImg from "@/Images/ProjectImages/dmcpro.png";
 
-import { IoMdClose } from "react-icons/io";
+import FlixgoImg from "@/Images/ProjectImages/flixgoImg.png";
+import nxtWatchImg from "@/Images/ProjectImages/nxtwatchimg.png";
+import bookhubImg from "@/Images/ProjectImages/bookhub.png";
+import MyKitchenImg from "@/Images/ProjectImages/MyKitchen.png";
+import NxtTrendsImg from "@/Images/ProjectImages/NxtTrends.png";
+import FoodMunchImg from "@/Images/ProjectImages/FoodMunch.png";
+import FyleImg from "@/Images/ProjectImages/Fyle.png";
+import BharatNewsImg from "@/Images/ProjectImages/BharatNews.png";
+import TodoAppImg from "@/Images/ProjectImages/TodoApp.png";
+import WeFrameImg from "@/Images/ProjectImages/WeFrame.png";
+import ShoppinAppleImg from "@/Images/ProjectImages/ShoppinApple.png";
+import ExploreImg from "@/Images/ProjectImages/Explore.png";
 const PorfolioSection = (theme) => {
   console.log("theme", theme);
   const [activeService, setActiveService] = useState(false);
@@ -24,27 +32,25 @@ const PorfolioSection = (theme) => {
   const serviceData = [
     {
       id: 1,
-      ServiceName: "Frontend Development",
+      ServiceName: "Flixgo",
+      category: "Full Stack",
+      project_link: "https://flyyourtechflixgonewone.vercel.app/",
+      special_points: "",
       Description: [
-        "Responsive and mobile-friendly UI designs.",
-        "Interactive components and seamless navigation using React.js and Next.js.",
-        "Pixel-perfect layouts for businesses and personal projects.",
-        "Reusable and modular React components for faster development.",
-        "Cross-browser testing and debugging for a consistent user experience.",
+        "Developed a production-ready movie streaming application with a robust backend and secure frontend.",
+        "Implemented Admin authentication and authorization to ensure data protection and secure access.",
+        "Built a dynamic admin panel to manage movies and web series efficiently.",
+        "Designed a fully responsive and interactive UI for seamless user experience across devices.",
       ],
-      Skills: [
-        "React.js",
-        "Next.js",
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "Tailwind CSS",
-      ],
+      Skills: ["React.js", "HTML", "CSS", "Bootstrap", "Appwrite"],
       Image: FlixgoImg,
     },
     {
       id: 2,
-      ServiceName: "Landing Page Development",
+      ServiceName: "DMCPro",
+      category: "Contributed",
+      project_link: "https://dmcprowebsite.vercel.app/",
+      special_points: "",
       Description: [
         "Custom-designed landing pages tailored to client needs.",
         "SEO-friendly and fast-loading designs to improve user engagement.",
@@ -52,19 +58,14 @@ const PorfolioSection = (theme) => {
         "Cross-device compatibility for desktop, tablet, and mobile.",
         "Optimized call-to-action (CTA) placements to increase conversions.",
       ],
-      Skills: [
-        "HTML",
-        "CSS",
-        "Tailwind CSS",
-        "Bootstrap",
-        "React.js",
-        "Next.js",
-      ],
+      Skills: ["HTML", "CSS", "Bootstrap", "React.js"],
       Image: DmcProImg,
     },
     {
       id: 3,
-      ServiceName: "Full-Stack Web Development",
+      ServiceName: "Book Hub",
+      category: "",
+      project_link: "",
       Description: [
         "Scalable web applications with robust backends.",
         "Secure and efficient user authentication and authorization.",
@@ -82,12 +83,14 @@ const PorfolioSection = (theme) => {
         "Firebase",
         "Appwrite",
       ],
-      Image: fullStackImg, // Example icon
+      Image: bookhubImg, // Example icon
     },
 
     {
       id: 4,
-      ServiceName: "Admin Panel Development",
+      ServiceName: "NxtWatch",
+      category: "",
+      project_link: "",
       Description: [
         "Admin dashboards for managing users, content, and analytics.",
         "Integration of real-time data and SSR for optimal performance.",
@@ -105,7 +108,223 @@ const PorfolioSection = (theme) => {
         "Firebase",
         "Appwrite",
       ],
-      Image: adminpanelimg,
+      Image: nxtWatchImg,
+    },
+    {
+      id: 5,
+      ServiceName: "My Kitchen",
+      category: "",
+      project_link: "",
+      Description: [
+        "Admin dashboards for managing users, content, and analytics.",
+        "Integration of real-time data and SSR for optimal performance.",
+        "Secure role-based access and data visualization.",
+        "Customizable dashboards with charts, tables, and graphs.",
+        "Efficient backend logic to handle large-scale data management.",
+      ],
+      Skills: [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SQL",
+        "Firebase",
+        "Appwrite",
+      ],
+      Image: MyKitchenImg,
+    },
+    {
+      id: 6,
+      ServiceName: "NxtTrends",
+      category: "",
+      project_link: "",
+      Description: [
+        "Admin dashboards for managing users, content, and analytics.",
+        "Integration of real-time data and SSR for optimal performance.",
+        "Secure role-based access and data visualization.",
+        "Customizable dashboards with charts, tables, and graphs.",
+        "Efficient backend logic to handle large-scale data management.",
+      ],
+      Skills: [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SQL",
+        "Firebase",
+        "Appwrite",
+      ],
+      Image: NxtTrendsImg,
+    },
+    {
+      id: 7,
+      ServiceName: "FoodMunch",
+      category: "",
+      project_link: "",
+      Description: [
+        "Admin dashboards for managing users, content, and analytics.",
+        "Integration of real-time data and SSR for optimal performance.",
+        "Secure role-based access and data visualization.",
+        "Customizable dashboards with charts, tables, and graphs.",
+        "Efficient backend logic to handle large-scale data management.",
+      ],
+      Skills: [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SQL",
+        "Firebase",
+        "Appwrite",
+      ],
+      Image: FoodMunchImg,
+    },
+    {
+      id: 8,
+      ServiceName: "Fyle",
+      category: "",
+      project_link: "",
+      Description: [
+        "Admin dashboards for managing users, content, and analytics.",
+        "Integration of real-time data and SSR for optimal performance.",
+        "Secure role-based access and data visualization.",
+        "Customizable dashboards with charts, tables, and graphs.",
+        "Efficient backend logic to handle large-scale data management.",
+      ],
+      Skills: [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SQL",
+        "Firebase",
+        "Appwrite",
+      ],
+      Image: FyleImg,
+    },
+    {
+      id: 9,
+      ServiceName: "Bharat News",
+      category: "",
+      project_link: "",
+      Description: [
+        "Admin dashboards for managing users, content, and analytics.",
+        "Integration of real-time data and SSR for optimal performance.",
+        "Secure role-based access and data visualization.",
+        "Customizable dashboards with charts, tables, and graphs.",
+        "Efficient backend logic to handle large-scale data management.",
+      ],
+      Skills: [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SQL",
+        "Firebase",
+        "Appwrite",
+      ],
+      Image: BharatNewsImg,
+    },
+    {
+      id: 10,
+      ServiceName: "Todo App",
+      category: "",
+      project_link: "",
+      Description: [
+        "Admin dashboards for managing users, content, and analytics.",
+        "Integration of real-time data and SSR for optimal performance.",
+        "Secure role-based access and data visualization.",
+        "Customizable dashboards with charts, tables, and graphs.",
+        "Efficient backend logic to handle large-scale data management.",
+      ],
+      Skills: [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SQL",
+        "Firebase",
+        "Appwrite",
+      ],
+      Image: TodoAppImg,
+    },
+    {
+      id: 11,
+      ServiceName: "WeFrame",
+      category: "",
+      project_link: "",
+      Description: [
+        "Admin dashboards for managing users, content, and analytics.",
+        "Integration of real-time data and SSR for optimal performance.",
+        "Secure role-based access and data visualization.",
+        "Customizable dashboards with charts, tables, and graphs.",
+        "Efficient backend logic to handle large-scale data management.",
+      ],
+      Skills: [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SQL",
+        "Firebase",
+        "Appwrite",
+      ],
+      Image: WeFrameImg,
+    },
+    {
+      id: 12,
+      ServiceName: "ShoppinApple",
+      category: "",
+      project_link: "",
+      Description: [
+        "Admin dashboards for managing users, content, and analytics.",
+        "Integration of real-time data and SSR for optimal performance.",
+        "Secure role-based access and data visualization.",
+        "Customizable dashboards with charts, tables, and graphs.",
+        "Efficient backend logic to handle large-scale data management.",
+      ],
+      Skills: [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SQL",
+        "Firebase",
+        "Appwrite",
+      ],
+      Image: ShoppinAppleImg,
+    },
+    {
+      id: 13,
+      ServiceName: "Explore",
+      category: "",
+      project_link: "",
+      Description: [
+        "Admin dashboards for managing users, content, and analytics.",
+        "Integration of real-time data and SSR for optimal performance.",
+        "Secure role-based access and data visualization.",
+        "Customizable dashboards with charts, tables, and graphs.",
+        "Efficient backend logic to handle large-scale data management.",
+      ],
+      Skills: [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SQL",
+        "Firebase",
+        "Appwrite",
+      ],
+      Image: ExploreImg,
     },
   ];
   console.log(activeService, "activedta", activeServiceData);
@@ -147,11 +366,21 @@ const PorfolioSection = (theme) => {
         onClick={() => handleOpenModal(each)}
       >
         <div className="flex flex-wrap  flex-col justify-start items-start gap-y-2">
-          <Image
-            src={each.Image}
-            alt={`img${each.id}`}
-            className="w-full rounded-t-lg lg:max-h-[180px]"
-          />
+          <div className="relative w-full">
+            <Image
+              src={each.Image}
+              alt={`img${each.id}`}
+              className="w-full rounded-t-lg lg:max-h-[180px]"
+            />{" "}
+            <span className="absolute top-2 right-2 lg:hidden rounded-[50%] bg-red-500 md:text-lg p-2 text-white ">
+              <IoMdOpen />
+            </span>
+            <div className="rounded-t-lg absolute bg-red-500  top-0 w-full h-full transition-opacity delay-150 duration-300 cursor-pointer opacity-0 hover:opacity-75 flex items-center justify-center">
+              <h1 className="text-white hover:opacity-1 flex items-center gap-1 ">
+                ClickMe <IoMdOpen className="font-bold text-xl" />
+              </h1>
+            </div>
+          </div>
           <h2 className="text-lg md:text-lg font-semibold text-white mb-2 p-2">
             {each.ServiceName}
           </h2>
@@ -171,14 +400,6 @@ const PorfolioSection = (theme) => {
       <div className="w-full lg:w-[100%]  flex flex-col pt-[20px] lg:pt-[40px]  gap-[2rem] ">
         <h1 className="text-2xl font-bold text-red-500 text-center">
           Portfolio
-          <br />
-          <span
-            className={`${
-              !themeAct ? "text-black" : "text-white"
-            } font-medium   text-sm`}
-          >
-            All My Projects
-          </span>
         </h1>
         <div className="flex gap-4 flex-wrap justify-center">
           <button
@@ -279,7 +500,7 @@ const PorfolioSection = (theme) => {
               <Image
                 src={activeServiceData.Image}
                 alt={activeServiceData.ServiceName}
-                className="rounded-lg  w-full lg:w-[80%]  object-cover mb-6 shadow-md m-auto"
+                className="rounded-lg  w-full lg:w-[100%]  object-cover mb-6 shadow-md m-auto"
               />
               <h3 className="text-xl font-semibold text-red-500 mb-2">
                 Description:
@@ -302,7 +523,7 @@ const PorfolioSection = (theme) => {
                 Technologies:
                 <br />
                 <span className="text-gray-800 font-normal text-sm">
-                  **As per the project requirements
+                  **Project Developed using these Technologies
                 </span>
               </h3>
 

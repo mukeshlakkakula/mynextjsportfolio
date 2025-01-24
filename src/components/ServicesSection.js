@@ -147,7 +147,7 @@ const ServicesSection = (theme) => {
           </h2>
           <button
             onClick={() => handleOpenModal(each)}
-            className="flex cursor-pointer gap-2 items-center hover:underline hover:font-bold underline-offset-1  text-base text-black font-medium min-w-[50%] justify-start p-2"
+            className="flex cursor-pointer gap-2 items-center underline lg:no-underline hover:underline hover:font-bold underline-offset-1  text-base text-black font-medium min-w-[50%] justify-start p-2"
           >
             Read more{" "}
             <span className="rounded-[50%] bg-red-500 lg:text-lg p-2 text-white ">
