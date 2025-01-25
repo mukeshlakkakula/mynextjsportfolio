@@ -50,7 +50,7 @@ const AboutSection = (theme) => {
         >
           My Skills & Experience
         </p>
-        <div className="flex gap-4 flex-wrap justify-center">
+        <div className="flex gap-4 flex-wrap justify-center relative z-10">
           <button
             onClick={() => {
               setActiveTab("Skills");
