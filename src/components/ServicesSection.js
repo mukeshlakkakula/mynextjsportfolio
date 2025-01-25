@@ -178,7 +178,7 @@ const ServicesSection = (theme) => {
       <hr />
       {/* Modal */}
       {activeService && (
-        <div className="fixed z-50 inset-0 bg-black bg-opacity-100 flex justify-center items-center ">
+        <div className="fixed z-50 min-h-full inset-0 bg-black bg-opacity-100 flex justify-center items-center ">
           <div
             ref={modalRef}
             className="bg-white rounded-xl w-11/12 lg:w-1/2 h-auto max-h-[90vh] overflow-auto p-4 lg:p-6 relative shadow-lg"
