@@ -22,8 +22,8 @@ export default async function handler(req, res) {
       const mailOptions = {
         from: email,
         to: "lakkakulababblu@gmail.com",
-        subject: `Contact Form Submission from ${name}`,
-        text: `You have a new message from ${name} (${email}):\n\n${message}`,
+        subject: `Contact Form LazerCode Submission from ${name}`,
+        text: `You have a new message from ${name} \n\n where Mail id: (${email}):\n\nMessage : ${message}`,
       };
 
       // Send the email

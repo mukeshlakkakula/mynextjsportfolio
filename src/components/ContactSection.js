@@ -100,8 +100,14 @@ const ContactSection = (theme) => {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="w-full  bg-white shadow-xl p-6 rounded relative z-10"
+          className="w-full  bg-white shadow-xl p-6 rounded-lg relative z-10"
         >
+          {" "}
+          <div className="flex w-full justify-center items-center">
+            <h2 className="font-bold text-xl rounded-full border p-2 pl-6 pr-6 font-sans">
+              Let's work together
+            </h2>
+          </div>
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -116,7 +122,7 @@ const ContactSection = (theme) => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full text-black p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="Your Name"
             />
           </div>
@@ -134,7 +140,7 @@ const ContactSection = (theme) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full text-black p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="Your Email"
             />
           </div>
@@ -151,7 +157,7 @@ const ContactSection = (theme) => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full text-black p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
               rows="4"
               placeholder="Your Message"
             ></textarea>
@@ -164,7 +170,6 @@ const ContactSection = (theme) => {
           >
             {sending ? "Sending..." : "Send message"}
           </button>
-
           {status && <p className="mt-4 text-sm text-green-600">{status}</p>}
         </form>{" "}
         <ToastContainer />

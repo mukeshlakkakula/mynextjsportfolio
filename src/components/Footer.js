@@ -1,11 +1,16 @@
-import React from "react";
-
-const Footer = () => {
+import React, { useState, useEffect } from "react";
+const Footer = (theme) => {
+  const [themeAct, setActiveTheme] = useState(theme.theme);
+  useEffect(() => {
+    setActiveTheme(theme.theme);
+  }, [theme]);
   return (
-    <footer className="w-[100vw] bg-gray-800 text-white py-4 pb-[80px]">
-      <div className="flex flex-col md:flex-row items-center justify-center mx-auto text-center gap-6">
-        <p className="text-sm">Your satisfaction, our priority.</p>
-        <p className="text-xs ">
+    <footer className="w-[100vw]   py-4 pb-[80px]">
+      <div className="flex flex-col  border-t-2 p-4 md:flex-row items-center justify-center mx-auto text-center gap-6">
+        <p className={` ${themeAct ? "text-white" : "text-black"}`}>
+          Your satisfaction,is our priority.
+        </p>
+        <p className={` ${themeAct ? "text-white" : "text-black"}`}>
           © {new Date().getFullYear()} All Rights Reserved. Thank you for
           visiting my website.
         </p>
