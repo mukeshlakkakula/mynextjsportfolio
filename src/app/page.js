@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import ContactSection from "@/components/ContactSection";
 import ServicesSection from "@/components/ServicesSection";
 import PorfolioSection from "@/components/PorfolioSection";
+import Footer from "@/components/Footer";
 export default function Home() {
   const [theme, setTheme] = useState(true);
 
@@ -75,6 +76,7 @@ export default function Home() {
 
       <PorfolioSection theme={theme} />
       <ContactSection theme={theme} />
+      <Footer theme={theme} />
     </motion.div>
   );
 }
