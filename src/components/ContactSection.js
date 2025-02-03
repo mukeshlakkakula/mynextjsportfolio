@@ -105,7 +105,7 @@ const ContactSection = (theme) => {
           {" "}
           <div className="flex w-full justify-center items-center">
             <h2 className="font-bold text-xl rounded-full border p-2 pl-6 pr-6 font-sans">
-              Let's work together
+              Let&apos;s work together
             </h2>
           </div>
           <div className="mb-4">
