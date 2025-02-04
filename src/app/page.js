@@ -41,7 +41,7 @@ export default function Home() {
         theme ? "darkTheme" : "lightTheme"
       } flex flex-col justify-center items-center p-[0.6rem] md:pl-[3rem] md:pr-[3rem] md:pt-[1rem] lg:pl-[4rem] lg:pr-[4rem] lg:pt-[1.3rem]`}
     >
-      <div className="flex justify-between w-full">
+      <div className="flex justify-between w-full  ">
         <h1 className="text-3xl text-red-h">
           Lazer
           <span className={`${theme ? "text-white" : "text-black"}`}>Code</span>
@@ -51,7 +51,7 @@ export default function Home() {
             onClick={() => {
               scrollToSection("contact");
             }}
-            className="pl-4 relative z-10 pr-4 pt-2 pb-2 text-red-h text-sm lg:text-md font-normal border-[2px] rounded-full"
+            className="font-roboto pl-4 relative z-10 pr-4 pt-2 pb-2 text-red-h text-sm lg:text-md font-bold border-[2px] rounded-full"
           >
             Let&#39;s talk
           </button>

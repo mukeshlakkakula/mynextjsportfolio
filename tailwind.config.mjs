@@ -26,6 +26,8 @@ export default {
       fontFamily: {
         inter: ["var(--font-inter)", "sans-serif"], // Add Inter font
         roboto: ["var(--font-roboto)", "sans-serif"], // Add Roboto font
+        lato: ["Lato", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },

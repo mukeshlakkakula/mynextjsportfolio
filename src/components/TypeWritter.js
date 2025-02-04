@@ -57,7 +57,7 @@ const ProfileTypewriter = (theme) => {
           !newTheme ? "text-black" : "text-white"
         } text-2xl font-medium `}
       >
-        Hello, I am Mukesh
+        Hello, I am Mukesh Lakkakula
       </p>
       <h2
         className={`${
@@ -70,7 +70,7 @@ const ProfileTypewriter = (theme) => {
       <p
         className={`${
           !newTheme ? "text-black" : "text-white"
-        } font-medium   text-sm`}
+        } font-medium   text-sm font-roboto`}
       >
         I am skilled with a proven track record of delivering high-quality web
         applications tailored to client needs. I specialize in building scalable

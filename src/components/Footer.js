@@ -5,7 +5,7 @@ const Footer = (theme) => {
     setActiveTheme(theme.theme);
   }, [theme]);
   return (
-    <footer className="w-[100vw]   py-4 pb-[80px]">
+    <footer className="w-[100vw]   py-4 pb-[60px]">
       <div className="flex flex-col  border-t-2 p-4 md:flex-row items-center justify-center mx-auto text-center gap-6">
         <p className={` ${themeAct ? "text-white" : "text-black"}`}>
           Your satisfaction,is our priority.
