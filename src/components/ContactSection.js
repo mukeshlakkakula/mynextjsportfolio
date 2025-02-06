@@ -73,7 +73,7 @@ const ContactSection = (theme) => {
       <h1 className="text-2xl font-bold text-red-500 text-center">
         Contact Me
       </h1>
-      <div className="w-full lg:w-[40%] md:w-[75%] flex flex-col gap-7 md:flex-row items-center justify-center">
+      <div className="w-full lg:w-[60%] md:w-[75%] flex flex-col gap-7 md:flex-row items-center justify-center">
         <div className="flex md:flex-col  gap-5  text-3xl text-indigo-600">
           <a
             href="https://wa.me/918978347377"
@@ -102,7 +102,7 @@ const ContactSection = (theme) => {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="w-full border-b-4   border-red-500  bg-transparent p-6 rounded-lg relative z-10"
+          className="w-full xl:w-[60%] border-b-4   border-red-500  bg-transparent p-6 rounded-lg relative z-10"
         >
           {" "}
           <div className="flex w-full justify-center items-center pb-4">

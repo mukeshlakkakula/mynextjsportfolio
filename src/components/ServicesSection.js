@@ -162,16 +162,16 @@ const ServicesSection = (theme) => {
   return (
     <motion.div
       id="services"
-      className="min-h-screen w-full flex flex-col  items-center lg:gap-7  "
+      className=" w-full flex flex-col  items-center lg:gap-7  "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="w-full lg:w-[100%]  flex flex-col pt-[20px] lg:pt-[40px]  gap-[2rem] ">
+      <div className="w-full md:w-[100%]  flex flex-col pt-[20px] lg:pt-[40px]  gap-[2rem] ">
         <h1 className="text-2xl font-bold text-red-500 text-center">
           My Services
         </h1>
-        <div className="flex flex-row gap-y-4 flex-wrap lg:w-[80%] m-auto">
+        <div className="flex flex-row gap-y-4 flex-wrap md:w-[80%] m-auto">
           {serviceCards}
         </div>
       </div>
@@ -181,7 +181,7 @@ const ServicesSection = (theme) => {
         <div className="fixed z-50 min-h-screen inset-0 bg-black bg-opacity-100 flex justify-center items-center ">
           <div
             ref={modalRef}
-            className="bg-white rounded-xl w-11/12 lg:w-1/2 h-auto max-h-[90vh] overflow-auto p-4 lg:p-6 relative shadow-lg"
+            className="bg-white rounded-xl w-11/12 md:w-2/3 lg:w-1/2 h-auto max-h-[90vh] overflow-auto p-4 lg:p-6 relative shadow-lg"
           >
             {/* Close Button */}
             <button

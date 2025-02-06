@@ -24,7 +24,7 @@ const AboutSection = (theme) => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="w-full lg:w-[60%]  flex flex-col pt-[20px] lg:pt-[40px] m-auto gap-[2rem] ">
+      <div className="w-full lg:w-[100%] xl:w-[60%] flex flex-col pt-[20px] lg:pt-[40px] m-auto gap-[2rem] ">
         <h1 className="text-2xl font-bold text-red-500 text-center">
           About Me
         </h1>

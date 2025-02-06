@@ -9,6 +9,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { RiScrollToBottomFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa6";
 import gsap from "gsap";
+import Link from "next/link";
 
 const HomeSection = (theme) => {
   console.log("thge", theme.theme);
@@ -32,7 +33,7 @@ const HomeSection = (theme) => {
   return (
     <motion.div
       id="home"
-      className="min-h-screen w-full flex justify-center items-center   "
+      className="min-h-screen md:min-h-[50vh] xl:min-h-screen w-full flex justify-center items-center   "
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
@@ -57,21 +58,27 @@ const HomeSection = (theme) => {
           ></div>
 
           <div className="flex gap-x-6 lg:gap-2 lg:flex-col justify-between  ">
-            <FaLinkedin
-              className={`${
-                !theme.theme ? "text-black" : "text-white"
-              } text-[28px] hover:text-blue-600 hover:bg-transparent rounded `}
-            />
-            <FaSquareXTwitter
-              className={`${
-                !theme.theme ? "text-black" : "text-white"
-              } text-[28px] hover:text-white hover:bg-black hover:rotate-12 rounded`}
-            />
-            <FaInstagram
-              className={`${
-                !theme.theme ? "text-black" : "text-white"
-              } text-[28px] hover:text-white hover:bg-pink-500 rounded transition-colors duration-300`}
-            />
+            <Link href="https://www.linkedin.com/in/mukesh-lakkakula/">
+              <FaLinkedin
+                className={`${
+                  !theme.theme ? "text-black" : "text-white"
+                } text-[28px] hover:text-blue-600 hover:bg-transparent rounded `}
+              />{" "}
+            </Link>
+            <Link href="https://x.com/laze_rcode">
+              <FaSquareXTwitter
+                className={`${
+                  !theme.theme ? "text-black" : "text-white"
+                } text-[28px] hover:text-white hover:bg-black hover:rotate-12 rounded`}
+              />{" "}
+            </Link>
+            <Link href="https://www.instagram.com/laze.rcode/?hl=en">
+              <FaInstagram
+                className={`${
+                  !theme.theme ? "text-black" : "text-white"
+                } text-[28px] hover:text-white hover:bg-pink-500 rounded transition-colors duration-300`}
+              />
+            </Link>
           </div>
         </div>
         <div className=" lg:order-2 order-2 flex flex-col justify-between gap-4">
